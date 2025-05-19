@@ -5,9 +5,9 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   const [text] = useTypewriter({
-    words: ['Web Developer', 'Mobile Application Developer', 'Desktop Application Developer'],
+    words: ['mobile applications', 'web applications', 'desktop software'],
     loop: true,
-    delaySpeed: 2000
+    delaySpeed: 2000,
   });
 
   const handleDownload = () => {
@@ -21,32 +21,86 @@ const Hero = () => {
 
   return (
     <section className="hero" id="home">
-      <motion.div 
+      {/* Hero Content */}
+      <motion.div
         className="hero-content"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <h3 className="subtitle">Hey There,</h3>
-        <h1 className="title">I'm Kavishan Hettiarachchi</h1>
-        <h3 className="typewriter">
-          I'm a <span>{text}</span>
+        {/* Subtitle Animation */}
+        <motion.h3
+          className="subtitle"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.2 }}
+        >
+          Hey There,
+        </motion.h3>
+
+        {/* Title Animation */}
+        <motion.h1
+          className="title"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.4 }}
+        >
+          I'm Kavishan Hettiarachchi
+        </motion.h1>
+
+        {/* Typewriter Effect */}
+        <motion.h3
+          className="typewriter"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.6 }}
+        >
+          I build <span>{text}</span>
           <Cursor cursorStyle="_" />
-        </h3>
-        <p className="description">
+        </motion.h3>
+
+        {/* Description Animation */}
+        <motion.p
+          className="description"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.8 }}
+        >
           I specialize in building sleek and functional websites, mobile apps, and desktop applications that solve real-world problems. With a focus on clean code and intuitive design, I turn ideas into reality.
-        </p>
-        <div className="socials">
-          <a href="#" aria-label="GitHub"><BsGithub /></a>
-          <a href="#" aria-label="LinkedIn"><BsLinkedin /></a>
-          <a href="#" aria-label="Instagram"><BsInstagram /></a>
-        </div>
-        <button className="download-btn" onClick={handleDownload}>
+        </motion.p>
+
+        {/* Social Icons Animation */}
+        <motion.div
+          className="socials"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1 }}
+        >
+          <a href="#" aria-label="GitHub">
+            <BsGithub />
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <BsLinkedin />
+          </a>
+          <a href="#" aria-label="Instagram">
+            <BsInstagram />
+          </a>
+        </motion.div>
+
+        {/* Download Button Animation */}
+        <motion.button
+          className="download-btn"
+          onClick={handleDownload}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 1.2 }}
+        >
           <BsDownload /> Download CV
-        </button>
+        </motion.button>
       </motion.div>
 
-      <motion.div 
+      {/* Hero Image Animation */}
+      <motion.div
         className="hero-image"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
