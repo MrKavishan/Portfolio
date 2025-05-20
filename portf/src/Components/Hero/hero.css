@@ -31,7 +31,7 @@
 
 /* Hero Content Styling */
 .hero-content {
-  max-width: 600px;
+  max-width: 650px;
   z-index: 1;
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.05);
