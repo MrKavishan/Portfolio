@@ -1,7 +1,7 @@
 /* Base Styles */
 .hero {
   min-height: 100vh;
-  padding: 4rem;
+  padding: 4rem 5em;
   display: flex;
   align-items: center;
   justify-content: space-between;

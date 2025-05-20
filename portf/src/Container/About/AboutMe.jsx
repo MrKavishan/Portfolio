@@ -9,7 +9,7 @@ const AboutMe = () => {
       {/* Decorative background animation */}
       <div className="about-background"></div>
 
-      {/* About Me Content */}
+      
       <div className="about-content">
         <div className="about-header">
           <h1>About <span>Me</span></h1>
@@ -39,7 +39,7 @@ const AboutMe = () => {
         </div>
       </div>
 
-      {/* Skills Section */}
+      
       <div className="skills-section">
         <Skills />
       </div>

@@ -11,14 +11,14 @@ const skillsData = {
     { name: "JavaScript", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg ", level: 85 },
     { name: "Flutter", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg ", level: 80 },
     { name: "Dart", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg ", level: 75 },
-    { name: "Java (Frontend)", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg ", level: 80 },
-    { name: "C# (Frontend)", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg ", level: 75 },
+    { name: "Java ", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg ", level: 80 },
+    { name: "C# ", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg ", level: 75 },
   ],
   Backend: [
     { name: "Node.js", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg ", level: 85 },
     { name: "Express", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg ", level: 80 },
-    { name: "Java (Backend)", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg ", level: 85 },
-    { name: "C# (Backend)", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg ", level: 80 },
+    { name: "Java ", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg ", level: 85 },
+    { name: "C# ", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg ", level: 80 },
     { name: "ASP.NET", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg ", level: 85 },
   ],
   Database: [
