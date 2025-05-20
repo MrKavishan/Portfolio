@@ -109,52 +109,73 @@
   transform: translateY(-3px) scale(1.05);
 }
 
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+  color: white;
+  overflow-x: hidden;
+}
+
 /* Hero Image Styling */
 .hero-image {
   position: relative;
-  width: 100%; 
+  width: 100%;
   max-width: 400px; 
   aspect-ratio: 1 / 1; 
-  border-radius: 15px;
+  border-radius: 50%; 
   overflow: hidden;
-  box-shadow: 0 0 20px 10px rgba(255, 219, 30, 0.5);
-  
-  margin-top: 2rem; 
+  box-shadow: 
+    0 0 20px 10px rgba(253, 231, 36, 0.81), 
+    inset 0 0 10px rgba(193, 175, 98, 0.3); /* Inner glow effect */
+  margin-top: 2rem;
+  transition: all 0.3s ease;
+  border: 5px solid transparent; 
 }
+
+.hero-image::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 50%;
+  background: linear-gradient(140deg, #ffdb1e, #fdb13e, #f7dd37);
+  z-index: -1;
+  filter: blur(10px); /* Create a glowing aura */
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.hero-image:hover::before {
+  opacity: 1; 
+}
+
 
 .hero-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
+  object-fit: cover; 
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: grayscale(0%); 
 }
-
 .hero-image:hover {
-  box-shadow: 0 0 30px 15px rgba(255, 219, 30, 0.8);
+  box-shadow: 
+    0 0 30px 15px rgba(255, 219, 30, 0.8), 
+    inset 0 0 15px rgba(255, 219, 30, 0.5); 
+  border: 5px solid #ffdb1e; 
+  transform: scale(1.05); 
 }
 
 .hero-image img:hover {
-  transform: scale(1.05) rotate(2deg);
+  transform: scale(1.05) rotate(2deg); /* Adds scaling and slight rotation on hover */
+  filter: grayscale(0%) brightness(1.1); /* Brighten the image slightly */
 }
 
-/* Responsive Styles */
-@media screen and (max-width: 1024px) {
-  .hero {
-    flex-direction: column;
-    padding: 3rem 5%;
-    text-align: center;
-    gap: 2rem; 
-  }
-
-  .hero-content {
-    max-width: 100%;
-    margin-bottom: 2rem;
-  }
-
-  .hero-image {
-    max-width: 300px;
-    margin-top: 0; 
-  }
+.hero-image:active {
+  transform: scale(0.95); /* Shrink slightly when clicked */
 }
 
 @media screen and (max-width: 600px) {
