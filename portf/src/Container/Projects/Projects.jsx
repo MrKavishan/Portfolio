@@ -108,10 +108,15 @@ const Projects = () => {
       <div className="projects-container">
         <div className="projects-header">
           <h2>My <span className="accent">Projects</span></h2>
-          <div className="accent-bar"></div>
+          
           <p>
-            Explore my latest work that showcases my expertise in web development,
-            from responsive design to complex full-stack applications.
+          In this section, the projects showcased demonstrate my
+           skills in building mobile, web, and desktop applications.
+            Each project highlights my ability to design and develop 
+            user-friendly, efficient, and functional software solutions.
+             From responsive websites and dynamic web apps to mobile 
+             applications and desktop systems, these projects reflect
+              my passion for technology and my commitment to delivering high-quality results.
           </p>
         </div>
 
@@ -173,8 +178,103 @@ const Projects = () => {
           </button>
         </div>
 
+      {/* Project Thumbnails */}
+<div className="project-thumbnails">
+  {projectsData.map((project, index) => (
+    <div
+      key={project.id}
+      className={`project-thumbnail ${index === activeIndex ? 'active' : ''}`}
+      onClick={() => selectProject(index)}
+      onMouseEnter={() => setHoveredProject(project.id)}
+      onMouseLeave={() => setHoveredProject(null)}
+    >
+            {/* Thumbnail Image Container */}
+            <div className="thumbnail-image-container">
+                {/* Project Image */}
+                <img
+                src={project.image}
+               
+                className="thumbnail-image"
+                />
 
-        
+                {/* Overlay on Hover */}
+                <div
+                className={`thumbnail-overlay ${
+                    hoveredProject === project.id || index === activeIndex ? 'hovered' : ''
+                }`}
+                ></div>
+
+                {/* Thumbnail Content (Header, Description, Links) */}
+                <div className="thumbnail-content">
+                {/* Header with Title and Featured Badge */}
+                <div className="thumbnail-header">
+                    <h4>{project.title}</h4>
+                    {project.featured && (
+                    <span className="featured-tag">Featured</span>
+                    )}
+                </div>
+
+                {/* Hidden Description (Visible on Hover) */}
+                <div className="thumbnail-description">
+                    <p>{project.description}</p>
+                </div>
+
+                {/* Links (GitHub and Live Demo) */}
+                <div className="thumbnail-links">
+                    <a
+                    href={project.githubUrl}
+                    className="thumbnail-link github"
+                    onClick={(e) => e.stopPropagation()}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
+                    <Github size={14} />
+                    </a>
+                    <a
+                    href={project.liveUrl}
+                    className="thumbnail-link demo"
+                    onClick={(e) => e.stopPropagation()}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
+                    <ExternalLink size={14} />
+                    </a>
+                </div>
+                </div>
+            </div>
+            </div>
+        ))}
+        </div>
+
+        <div className="project-stats">
+          <div className="stat-card">
+            <div className="stat-icon">
+              <Code size={24} />
+            </div>
+            <div className="stat-content">
+              <h4>{projectsData.length}</h4>
+              <p>Projects Completed</p>
+            </div>
+          </div>
+          <div className="stat-card">
+            <div className="stat-icon">
+              <Globe size={24} />
+            </div>
+            <div className="stat-content">
+              <h4>10+</h4>
+              <p>Technologies Used</p>
+            </div>
+          </div>
+          <div className="stat-card">
+            <div className="stat-icon">
+              <Star size={24} />
+            </div>
+            <div className="stat-content">
+              <h4>100%</h4>
+              <p>Client Satisfaction</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

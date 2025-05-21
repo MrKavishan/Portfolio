@@ -13,7 +13,9 @@ const AboutMe = () => {
       <div className="about-content">
         <div className="about-header">
           <h1>About <span>Me</span></h1>
+          <div className="accent-bar"></div>
         </div>
+       
         <div className="about-wrapper">
           <div className="about-text">
             <div className="intro-section">

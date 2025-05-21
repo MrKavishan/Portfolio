@@ -3,7 +3,6 @@ import './App.css'
 import Hero from './Components/Hero/Hero'
 import Navbar from './Components/Navbar/Navbar'
 import AboutMe from './Container/About/AboutMe'
-import Skills from './Container/Skills/Skills'
 import Projects from './Container/Projects/Projects'
 
 function App() {
