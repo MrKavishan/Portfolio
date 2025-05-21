@@ -6,7 +6,7 @@ import Skills from '../Skills/Skills';
 const AboutMe = () => {
   return (
     <div className="about-container" id="about">
-      {/* Decorative background animation */}
+      
       <div className="about-background"></div>
 
       
