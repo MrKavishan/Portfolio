@@ -108,6 +108,7 @@ const Projects = () => {
       <div className="projects-container">
         <div className="projects-header">
           <h2>My <span className="accent">Projects</span></h2>
+          <div className="accent-bar"></div>
           
           <p>
           In this section, the projects showcased demonstrate my
@@ -246,35 +247,7 @@ const Projects = () => {
         ))}
         </div>
 
-        <div className="project-stats">
-          <div className="stat-card">
-            <div className="stat-icon">
-              <Code size={24} />
-            </div>
-            <div className="stat-content">
-              <h4>{projectsData.length}</h4>
-              <p>Projects Completed</p>
-            </div>
-          </div>
-          <div className="stat-card">
-            <div className="stat-icon">
-              <Globe size={24} />
-            </div>
-            <div className="stat-content">
-              <h4>10+</h4>
-              <p>Technologies Used</p>
-            </div>
-          </div>
-          <div className="stat-card">
-            <div className="stat-icon">
-              <Star size={24} />
-            </div>
-            <div className="stat-content">
-              <h4>100%</h4>
-              <p>Client Satisfaction</p>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </div>
   );

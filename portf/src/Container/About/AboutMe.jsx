@@ -41,7 +41,6 @@ const AboutMe = () => {
         </div>
       </div>
 
-      
       <div className="skills-section">
         <Skills />
       </div>

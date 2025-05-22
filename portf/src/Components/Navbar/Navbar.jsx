@@ -23,6 +23,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
+
       <div className="logo">
         <h1>Portfolio</h1>
       </div>

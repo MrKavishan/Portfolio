@@ -1,4 +1,4 @@
-/* General Styles */
+
 .about-container {
   position: relative;
   min-height: 100vh;
@@ -34,7 +34,6 @@
   }
 }
 
-
 .about-content {
   position: relative;
   z-index: 1;
@@ -44,28 +43,27 @@
   text-align: center;
 }
 
-.about-header {
-  position: relative;
-  margin-bottom: 20px;
-}
-
 .about-header h1 {
   font-size: 2.5rem;
-  margin: 0;
-  display: inline-block; 
-  position: relative;
+  
 }
 
 .about-header span {
   color: #ffdb1e;
 }
-
-
-
-.about-header:hover .accent-bar {
-  width: 10rem; 
+.accent-bar {
+  width: 6rem;
+  height: 0.25rem;
+  background-color: #ffdb1e;
+  border-radius: 9999px;
+  margin-bottom: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  
 }
-
+.about-header:hover .accent-bar {
+  width: 10rem;
+}
 
 .about-text {
   margin-top: 20px;
@@ -76,7 +74,6 @@
   line-height: 1.6;
   margin-bottom: 20px;
 }
-
 
 .dev-focus {
   display: flex;
@@ -96,40 +93,17 @@
   font-size: 2rem;
   color: #ffdb1e;
   margin-bottom: 10px;
-  transition: transform 0.3s ease;
-}
-
-.dev-item:hover .dev-icon {
-  transform: scale(1.2); 
 }
 
 .dev-item span {
   font-size: 1rem;
   color: #ffffffcc;
-  transition: color 0.3s ease;
 }
-
-.dev-item:hover span {
-  color: #ffdb1e; 
-}
-
 
 .skills-section {
   width: 100%;
   max-width: 1200px;
   padding: 40px 20px;
-  margin-top: 40px;
+  margin-top: 40px; 
   z-index: 1;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .about-header h1 {
-    font-size: 2rem;
-  }
-
-  .dev-focus {
-    flex-direction: column;
-    gap: 20px;
-  }
 }

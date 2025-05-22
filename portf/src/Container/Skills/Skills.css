@@ -7,9 +7,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start; 
-    background: linear-gradient(135deg, #0f0f0f4f, #1c1c1c36);
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.789));
+    border-radius: 0.75rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.356);
     color: white;
-    padding: 20px 0; 
+    
   }
   
   /* Background Animation */
@@ -99,7 +101,8 @@
     max-width: 1200px; 
     padding: 0 20px; 
     overflow: hidden; 
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
+     
   }
   
   .skill-card {
@@ -115,13 +118,11 @@
     width: calc(16% - 20px); 
     height: auto; 
   
-    /* Center content vertically */
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  
-    /* Add spacing between cards */
     margin: 10px;
   }
   
