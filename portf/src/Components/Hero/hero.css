@@ -1,7 +1,7 @@
 /* Base Styles */
 .hero {
   min-height: 100vh;
-  padding: 4rem 5em;
+  padding: 0rem 5em;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -36,7 +36,7 @@
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.05);
   border-radius: 15px;
-  padding: 2rem;
+  padding: 1rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
@@ -47,7 +47,7 @@
 }
 
 .title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #ffdb1e; 
   margin-bottom: 1rem;
 

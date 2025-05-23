@@ -43,7 +43,7 @@
 .projects-header {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center-align all items */
+  align-items: center; 
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -51,7 +51,7 @@
 .projects-header h2 {
   font-size: 2.5rem;
   font-weight: 700;
-  position: relative; /* Ensure accent-bar is positioned relative to the header */
+  position: relative; 
 }
 
 .accent {
@@ -64,7 +64,7 @@
   background-color: #ffdb1e;
   border-radius: 9999px;
   transition: width 0.3s ease;
-  margin: 0.5rem auto 1.5rem; /* Center-align and add spacing */
+  margin: 0.5rem auto 1.5rem; 
 }
 
 .projects-header:hover .accent-bar {
@@ -74,11 +74,11 @@
 .projects-header p {
   font-size: 1.125rem;
   line-height: 1.6;
-  max-width: 600px; /* Limit paragraph width for better readability */
+  max-width: 1200px; 
   color: #d1d1d1;
 }
 
-/* Featured Project */
+
 .featured-project-container {
   position: relative;
   margin-bottom: 5rem;

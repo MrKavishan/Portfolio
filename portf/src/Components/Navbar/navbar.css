@@ -8,9 +8,9 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  background: linear-gradient(135deg, #353120, #1c1c1c); 
+  background: linear-gradient(135deg, #292619, #121111c6); 
   color: white;
-  padding: 1rem 2rem;
+  padding: 0.6rem 2rem;
   position: sticky;
   top: 0;
   z-index: 1000;
