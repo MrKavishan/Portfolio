@@ -1,12 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
-import {
-  FaWhatsapp,
-  FaEnvelope,
-  FaLinkedin,
-  FaGithub,
-} from "react-icons/fa";
+import { FaWhatsapp, FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 import "./Contact.css";
 
 const Contact = () => {
@@ -31,20 +26,19 @@ const Contact = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    // Send email using Email.js
     emailjs
       .send(
-        "YOUR_SERVICE_ID", // Replace with your Email.js service ID
-        "YOUR_TEMPLATE_ID", // Replace with your Email.js template ID
+        "YOUR_SERVICE_ID",
+        "YOUR_TEMPLATE_ID",
         formData,
-        "YOUR_PUBLIC_KEY" // Replace with your Email.js public key
+        "YOUR_PUBLIC_KEY"
       )
       .then(
         (response) => {
           console.log("Email sent successfully!", response);
           setIsSuccess(true);
           setIsError(false);
-          setFormData({ name: "", email: "", message: "" }); // Clear form
+          setFormData({ name: "", email: "", message: "" });
         },
         (error) => {
           console.error("Failed to send email:", error);
@@ -63,23 +57,20 @@ const Contact = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
-      className="contact-page"
+      className="contact-container"
       id="contact"
     >
-      {/* Background Animation */}
-      <div className="contact-background"></div>
+      <div className="contact-bg-animation"></div>
 
-      {/* Header and Introductory Paragraph */}
-      <div className="contact-header-section">
-        <div className="contact-header">
+      <div className="contact-header-wrapper">
+        <div className="contact-title">
           <h2>
-            Get in <span className="accent">Touch</span>
+            Get in <span className="contact-accent">Touch</span>
           </h2>
-          <div className="accent-bar"></div>
+          <div className="contact-title-underline"></div>
         </div>
 
-        {/* Introductory Paragraph */}
-        <div className="contact-intro">
+        <div className="contact-intro-text">
           <p>
             I'm always open to exciting opportunities and collaborations.
             Whether you have a question, want to discuss a project, or just say
@@ -88,23 +79,21 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Main Content (Form + Contact Info) */}
-      <div className="contact-content">
-        {/* Left Section - Contact Form */}
-        <div className="contact-left">
+      <div className="contact-main-content">
+        <div className="contact-form-section">
           <motion.div
-            className="contact-card"
+            className="contact-form-card"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="contact-form-header">
+            <div className="contact-form-title">
               <h3>Leave a Message</h3>
             </div>
-            {/* Success/Error Messages */}
+            
             {isSuccess && (
               <motion.p
-                className="success-message"
+                className="contact-success-msg"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -112,9 +101,10 @@ const Contact = () => {
                 Message sent successfully! I'll get back to you soon.
               </motion.p>
             )}
+            
             {isError && (
               <motion.p
-                className="error-message"
+                className="contact-error-msg"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -123,10 +113,9 @@ const Contact = () => {
               </motion.p>
             )}
 
-            {/* Contact Form */}
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="contact-form">
               <motion.div
-                className="form-group"
+                className="contact-input-group"
                 whileFocus={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
@@ -137,10 +126,12 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
+                  className="contact-form-input"
                 />
               </motion.div>
+              
               <motion.div
-                className="form-group"
+                className="contact-input-group"
                 whileFocus={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
@@ -151,10 +142,12 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
+                  className="contact-form-input"
                 />
               </motion.div>
+              
               <motion.div
-                className="form-group"
+                className="contact-input-group"
                 whileFocus={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
@@ -165,10 +158,13 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   required
+                  className="contact-form-textarea"
                 ></textarea>
               </motion.div>
+              
               <motion.button
                 type="submit"
+                className="contact-submit-btn"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 disabled={isLoading}
@@ -179,43 +175,50 @@ const Contact = () => {
           </motion.div>
         </div>
 
-        {/* Right Section - Contact Info */}
-        <div className="contact-right">
-          <div className="contact-info">
-            <h3>Other Ways to Reach Me</h3>
-            <ul>
-              <li>
+        <div className="contact-info-section">
+          <div className="contact-info-card">
+            <h3 className="contact-info-title">Other Ways to Reach Me</h3>
+            <ul className="contact-info-list">
+              <li className="contact-info-item">
                 <a
                   href="https://wa.me/94760870731"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="contact-info-link"
                 >
-                  <FaWhatsapp /> WhatsApp - 076 - 0870731
+                  <FaWhatsapp className="contact-info-icon" /> 
+                  WhatsApp - 076 - 0870731
                 </a>
               </li>
-              <li>
+              <li className="contact-info-item">
                 <a
                   href="mailto:ukavishan1234@gmail.com"
+                  className="contact-info-link"
                 >
-                  <FaEnvelope /> Email - ukavishan1234@gmail.com
+                  <FaEnvelope className="contact-info-icon" /> 
+                  Email - ukavishan1234@gmail.com
                 </a>
               </li>
-              <li>
+              <li className="contact-info-item">
                 <a
                   href="https://www.linkedin.com/in/kavishan-hettiarachchi"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="contact-info-link"
                 >
-                  <FaLinkedin /> LinkedIn - Kavishan Hettiarachchi
+                  <FaLinkedin className="contact-info-icon" /> 
+                  LinkedIn - Kavishan Hettiarachchi
                 </a>
               </li>
-              <li>
+              <li className="contact-info-item">
                 <a
                   href="https://github.com/MrKavishan"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="contact-info-link"
                 >
-                  <FaGithub /> GitHub - MrKavishan
+                  <FaGithub className="contact-info-icon" /> 
+                  GitHub - MrKavishan
                 </a>
               </li>
             </ul>

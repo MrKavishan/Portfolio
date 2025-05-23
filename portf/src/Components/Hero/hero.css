@@ -61,7 +61,7 @@
 }
 
 .typewriter span {
-  color: #ffdb1e; /* Highlighted text */
+  color: #ffdb1e; 
   font-weight: bold;
 }
 
@@ -89,11 +89,11 @@
 }
 
 .download-btn {
-  margin-top: 2rem;
+ margin-top: 2rem;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: #ffdb1e;
+  background-color: #ffd700;
   color: black;
   font-weight: bold;
   padding: 0.75rem 1.5rem;
