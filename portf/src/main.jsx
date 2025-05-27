@@ -5,7 +5,7 @@ import App from './App.jsx'
 import emailjs from '@emailjs/browser';
 
 
-emailjs.init('kAeI9vlyZmhWaCz_V');
+emailjs.init("kAeI9vlyZmhWaCz_V");
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />

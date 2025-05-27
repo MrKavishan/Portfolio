@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   const [text] = useTypewriter({
-    words: ['mobile applications', 'web applications', 'desktop software'],
+    words: ['Mobile Applications Developer', 'Web Developer', 'Desktop Applications Developer'],
     loop: true,
     delaySpeed: 2000,
   });
@@ -55,7 +55,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6 }}
         >
-          I build <span>{text}</span>
+          I'm a  <span>{text}</span>
           <Cursor cursorStyle="_" />
         </motion.h3>
 
@@ -106,7 +106,7 @@ const Hero = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, delay: 0.5 }}
       >
-        <img src="taa.png" alt="Profile" />
+        <img src="/taa.png" alt="Profile" />
       </motion.div>
     </section>
   );

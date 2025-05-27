@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import { FaWhatsapp, FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 import "./Contact.css";
 
@@ -25,29 +25,31 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
+    setIsSuccess(false);
+    setIsError(false);
 
-    emailjs
-      .send(
-        service_hjmvzl2,
-        template_o1lo3n4,
-        formData,
-        kAeI9vlyZmhWaCz_V
-      )
-      .then(
-        (response) => {
-          console.log("Email sent successfully!", response);
-          setIsSuccess(true);
-          setIsError(false);
-          setFormData({ name: "", email: "", message: "" });
-        },
-        (error) => {
-          console.error("Failed to send email:", error);
-          setIsError(true);
-          setIsSuccess(false);
-        }
-      )
-      .finally(() => {
+    const serviceId = 'service_hjmvzl2';
+    const templateId = 'template_qcz6arf';
+    const publicKey = 'kAeI9vlyZmhWaCz_V';
+
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      to_name: 'Kavishan',
+      message: formData.message,
+    };
+
+    emailjs.send(serviceId, templateId, templateParams, publicKey)
+      .then((response) => {
+        console.log('Email sent successfully:', response.text);
         setIsLoading(false);
+        setIsSuccess(true);
+        setFormData({ name: '', email: '', message: '' }); // Reset form
+      })
+      .catch((error) => {
+        console.error('Error sending email:', error);
+        setIsLoading(false);
+        setIsError(true);
       });
   };
 
@@ -181,7 +183,7 @@ const Contact = () => {
             <ul className="contact-info-list">
               <li className="contact-info-item">
                 <a
-                  href="https://wa.me/94760870731"
+                  href="https://wa.me/94760870731 "
                   target="_blank"
                   rel="noopener noreferrer"
                   className="contact-info-link"
@@ -201,7 +203,7 @@ const Contact = () => {
               </li>
               <li className="contact-info-item">
                 <a
-                  href="https://www.linkedin.com/in/kavishan-hettiarachchi"
+                  href="https://www.linkedin.com/in/kavishan-hettiarachchi "
                   target="_blank"
                   rel="noopener noreferrer"
                   className="contact-info-link"
@@ -212,7 +214,7 @@ const Contact = () => {
               </li>
               <li className="contact-info-item">
                 <a
-                  href="https://github.com/MrKavishan"
+                  href="https://github.com/MrKavishan "
                   target="_blank"
                   rel="noopener noreferrer"
                   className="contact-info-link"
