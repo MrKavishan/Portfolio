@@ -228,7 +228,7 @@
   position: absolute;
   inset: 0;
   background-color: black;
-  opacity: 0.2;
+  opacity: 0.1;
   transition: opacity 0.3s ease;
 }
 
@@ -288,7 +288,10 @@
   position: relative;
   cursor: pointer;
   overflow: hidden;
+  border: 1px solid;
   border-radius: 0.5rem;
+  border-color: #0f0f0f;
+  box-shadow: #000000;
   transition: all 0.3s ease;
 }
 
@@ -304,7 +307,8 @@
 .thumbnail-image-container {
   position: relative;
   height: 12rem;
-  background-color: #10101042;
+  background-color: #1010109a;
+  border: #aeaaaa;
 }
 
 .thumbnail-image {
@@ -321,9 +325,9 @@
 .thumbnail-overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.2);
   transition: opacity 0.3s ease;
-  opacity: 0;
+  
 }
 
 .project-thumbnail:hover .thumbnail-overlay,
