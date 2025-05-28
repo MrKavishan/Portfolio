@@ -8,7 +8,7 @@ const projectsData = [
     title: "Spice Mountain",
     description: "Developed the frontend of a responsive and modern e-commerce web application using React, Framer Motion, and CSS. Includes smooth page transitions and engaging animations to enhance the user experience.",
     tags: ["React.js ", "Framer Motion", "CSS"],
-    image: "/public/project images/spm.jpg",
+    image: "/project images/spm.jpg",
     githubUrl: "https://github.com/MrKavishan/E-Commerce",
     liveUrl: "https://spicemountain.vercel.app/",
     featured: true
@@ -18,7 +18,7 @@ const projectsData = [
     title: "Personal Portfolio",
     description: "A fully responsive and interactive portfolio website built with React to showcase my web development skills, experience, and projects. It serves as my professional digital presence for clients, recruiters, and collaborators.",
     tags: ["React.js", "Framer Motion", "CSS", "Email.Js"],
-    image: "/public/project images/pf.jpg",
+    image: "/project images/pf.jpg",
     githubUrl: "https://github.com/MrKavishan/Portfolio",
     liveUrl: "https://myportfolio-one-liart-29.vercel.app/",
     featured: true
